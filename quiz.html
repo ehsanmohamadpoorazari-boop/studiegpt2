@@ -1,42 +1,43 @@
 <!DOCTYPE html>
 <html lang="sv">
 <head>
-    <meta charset="UTF-8">
-    <title>Quiz - Studie GPT</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<title>Quiz - Studie GPT</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <nav>
-        <h2 class="logo">Studie GPT</h2>
-        <div class="nav-links">
-            <a href="index.html">Hem</a>
-            <a href="quiz.html">Quiz</a>
-            <a href="about.html">Om</a>
-        </div>
-    </nav>
+<nav>
+<h2 class="logo">Studie GPT</h2>
+<div class="nav-links">
+<a href="index.html">Hem</a>
+<a href="quiz.html">Quiz</a>
+<a href="about.html">Om</a>
+<a href="ordlista.html">Ordlista</a>
+</div>
+</nav>
 
-    <section class="page">
-        <h1>Välj ämne</h1>
-        <div id="subject-selection">
-            <button class="btn" data-subject="matematik">Matematik</button>
-            <button class="btn" data-subject="engelska">Engelska</button>
-            <button class="btn" data-subject="svenska">Svenska</button>
-            <button class="btn" data-subject="slump">Slumpmässigt</button>
-        </div>
+<section class="page">
+<h1>Välj ämne</h1>
+<div id="subject-selection">
+    <button class="btn" data-subject="matematik">Matematik</button>
+    <button class="btn" data-subject="engelska">Engelska</button>
+    <button class="btn" data-subject="svenska">Svenska</button>
+    <button class="btn" data-subject="slump">Slumpmässigt</button>
+</div>
 
-        <div id="quiz-container" style="display:none;">
-            <p id="question"></p>
-            <div id="answers"></div>
-            <button id="nextBtn" class="btn">Nästa</button>
-        </div>
+<div id="quiz-container" style="display:none;">
+    <p id="question"></p>
+    <div id="answers" class="answers-container"></div>
+    <button id="nextBtn" class="btn">Nästa</button>
+</div>
 
-        <div id="result" style="display:none;">
-            <h2>Resultat</h2>
-            <p id="score"></p>
-            <button id="restartBtn" class="btn">Spela igen</button>
-        </div>
-    </section>
+<div id="result" style="display:none;">
+    <h2>Resultat</h2>
+    <p id="score"></p>
+    <button id="restartBtn" class="btn">Spela igen</button>
+</div>
+</section>
 
 <script src="script.js"></script>
 </body>

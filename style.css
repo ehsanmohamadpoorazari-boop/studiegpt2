@@ -14,13 +14,14 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center; /* center all content vertically */
+    justify-content: flex-start;
     text-align: center;
     overflow-x: hidden;
     animation: gradientMove 25s ease infinite;
+    position: relative;
 }
 
-/* Gradient background animation */
+/* Gradient animation */
 @keyframes gradientMove {
     0% { background-position: 0% 50%; }
     50% { background-position: 100% 50%; }
@@ -33,35 +34,51 @@ nav {
     justify-content: center;
     gap: 40px;
     position: fixed;
-    top: 20px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(51,0,0,0.9);
+    padding: 20px 0;
     z-index: 100;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.7);
 }
 
-nav button {
-    padding: 12px 25px;
-    border: none;
-    border-radius: 25px;
-    font-weight: 600;
-    background: #330000;
+nav h2.logo {
+    font-size: 24px;
+    color: #ff4d4d;
+    font-weight: 800;
+    margin-right: 40px;
+}
+
+nav .nav-links a {
+    text-decoration: none;
     color: #ff6666;
-    cursor: pointer;
-    transition: 0.3s;
+    font-weight: 600;
+    padding: 8px 15px;
+    border-radius: 20px;
+    transition: all 0.3s;
 }
 
-nav button:hover {
+nav .nav-links a:hover {
     background: #4d0000;
     box-shadow: 0 0 15px #ff4d4d;
 }
 
-/* Hero Section */
-.hero {
-    margin-bottom: 50px;
+/* Page spacing for fixed nav */
+.page {
+    max-width: 800px;
+    padding: 120px 20px 40px 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
+/* Hero Section */
 .hero h1 {
     font-size: 60px;
     font-weight: 800;
-    color: #ff4d4d; /* solid color instead of background-clip */
+    color: #ff4d4d;
     text-shadow: 0 0 15px #ff1a1a, 0 0 30px #990000;
     margin-bottom: 20px;
 }
@@ -130,6 +147,12 @@ nav button:hover {
     z-index: 2;
 }
 
+.answers-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 /* Quiz question */
 #question {
     font-size: 26px;
@@ -142,6 +165,23 @@ nav button:hover {
     display: none;
     flex-direction: column;
     gap: 25px;
+}
+
+/* Wordlist */
+.word-list {
+    margin-top: 60px;
+    text-align: left;
+}
+
+.word-list ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.word-list li {
+    font-size: 18px;
+    margin-bottom: 6px;
+    color: #ffcccc;
 }
 
 /* Blobs */
@@ -181,4 +221,5 @@ body::after {
     .hero p { font-size: 16px; }
     .answer-btn { width: 95%; }
     #quiz-container, #result, #subject-selection { padding: 25px; }
+    .page { padding-top: 140px; }
 }
